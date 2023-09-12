@@ -105,13 +105,13 @@
        */
 
       const changePcontent = function (nuovoTesto) {
-        var divs = document.getElementsByTagName("div"); // Prendo tutti gli elementi div e siccome restituisce un array per selezioneare
+        let divs = document.getElementsByTagName("div"); // Prendo tutti gli elementi div e siccome restituisce un array per selezioneare
         //tutti i p figli di div uso il ciclo for
 
-        for (var i = 0; i < divs.length; i++) {
-          var paragrafi = divs[i].getElementsByTagName("p");
+        for (let i = 0; i < divs.length; i++) {
+          let paragrafi = divs[i].getElementsByTagName("p");
 
-          for (var j = 0; j < paragrafi.length; j++) {
+          for (let j = 0; j < paragrafi.length; j++) {
             paragrafi[j].innerHTML = nuovoTesto;
           }
         }
@@ -124,10 +124,10 @@
         */
 
       const changeUrls = function () {
-        var links = document.getElementsByTagName("a"); // Prende tutti gli elementi 'a'
+        let links = document.getElementsByTagName("a"); // Prende tutti gli elementi 'a'
 
-        for (var i = 0; i < links.length; i++) {
-          var link = links[i];
+        for (let i = 0; i < links.length; i++) {
+          const link = links[i];
 
           if (link.parentNode.id !== "footer") {
             link.href = "https://www.google.com";
@@ -182,8 +182,8 @@
       const paintItGreen = function () {
         const alList = document.getElementsByTagName("ul");
 
-        for (i = 0; i > alList.length; i++) {
-          allList.style.backgroundColor = "green";
+        for (i = 0; i < alList.length; i++) {
+          alList[i].style.backgroundColor = "green";
         }
       };
 
